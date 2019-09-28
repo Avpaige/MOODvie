@@ -1,0 +1,244 @@
+body{
+    background:#080808;
+    height: 100%;
+    overflow: hidden;
+}
+
+#welcomeBody{
+    background: #000000;
+
+}
+
+#surveyBody{
+    background: #000000;
+
+}
+
+.colImg{
+    width: 100%;
+
+}
+
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.firstAndSecondRow{
+    height:33vh;
+    margin-bottom:30px;
+}
+
+.thirdRow{
+    height:200px;
+    margin-top:-82px;
+}
+
+.logo{
+    margin:0 auto;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    position:absolute;
+    z-index: 9999;
+    width:765px;
+}
+
+.getStarted{
+    margin:0 auto;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    position:absolute;
+    z-index: 9999;
+    width:300px;
+    height: 60px;
+    background: #2AC940;
+    font-family: helvetica;
+    color: #FFFF;
+    letter-spacing: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:2px solid #2AC940;
+    font-size: 20px;
+   
+}
+
+.meangirls{
+    width:70%;
+}
+
+.johnWick{
+    width:100%;
+    margin-left:-80px;
+    opacity: 0.6;
+
+}
+
+.ealy{
+    margin-left:-50px;
+    width:75%;
+}
+
+.halloween{
+    margin-left:-80px;
+    margin-top:-50px;
+    width:60%;
+}
+
+.jeepers{
+    opacity: 0.82;
+    margin-left:-20px;
+    margin-top: -59px;
+    z-index: 1000 !important;
+    position: absolute;
+    width: 130%;
+}
+
+.taraji{
+    z-index: -1000 !important;
+    margin-top:-11px;
+    opacity: 0.8;
+}
+
+.birdman{
+    width:85% !important;
+    z-index: 1000 !important;
+    position: absolute;
+}
+
+.titanic{
+    margin-left:-54px;
+    margin-top:-15px;
+    z-index: 1002;
+    width:120%;
+
+}
+
+.neon{
+    width:105%;
+    margin-top:-20px;
+    margin-left:-40px;
+}
+
+.godfather{
+    width:55% !important;
+    z-index: 1001;
+    position: absolute;
+    margin-top:-20px;
+    margin-left:15px;
+}
+
+.moodvieLogo{
+    width:180px;
+    position:relative;
+    top:10px;
+    left:30px;
+    opacity:1.2;
+}
+
+.welcomeContainer{
+    margin-top:110px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.skipAheadText{
+    margin-top: 30px;
+    color: #33E1FF;
+    font-style: normal;
+    font-family: Helvetica;
+    letter-spacing: 3px;
+
+}
+
+.takeTestText{
+    margin-top: 30px;
+    color: #33E1FF;
+    font-style: normal;
+    font-family: Helvetica;
+    letter-spacing: 5px;
+    
+}
+
+.takeTestIn{
+
+}
+
+.welcomeButtons{
+    text-transform: uppercase;
+    font-family: Helvetica;
+    background: black;
+    border:1px solid #BDBDBD;
+    font-size:14px;
+    letter-spacing: 7px;
+    padding-right: 5px;
+    color: #ffff;
+    width:88px;
+    height:52px;
+    font-weight: bold;
+    border-radius:0px;
+}
+
+
+.welcomeButtonColor{
+    color:white;
+    width:88;
+    height:52;
+}
+.welcomeButtonColor:hover{
+    color:white;
+}
+
+.welcomeText{
+    font-family: helvetica;
+    margin-bottom: 50px;
+    letter-spacing: 8px;
+    font-size: 25px;
+
+}
+
+.welcomeButtonText{
+    top:10px;
+    position: relative;
+}
+
+.form-control{
+    background:#080808;
+    margin-top: 30px;
+    
+}
+
+.moodOptions{
+    margin-bottom:35px;
+    font-size:18;
+    letter-spacing: 8px;
+    font-family:Helvetica;
+}
+
+
+.selectLabel{
+margin: 0 auto;
+font-family: Helvetica;
+color: #33E1FF;
+
+}
+
+
+.secondResultRow{
+    margin-top:50px;
+}
+
+.genreText{
+    font-family:Helvetica;
+    letter-spacing: 7px;
+    font-weight: normal;
+}
+
+.resultTitle{
+    font-family: Helvetica;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+}

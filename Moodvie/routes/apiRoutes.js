@@ -1,24 +1,26 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/genres/:genres", function(req, res) {
+    db.Genres.findAll({
+      where: {
+        genres: req.params.genres
+      },
+      limit: 5
+    }).then(function(dbGenres) {
+      res.json(dbGenres);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/movies", function(req, res) {
+    db.Example.findAll({
+      where: {
+        //GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+
+      }
+    }).then(function(dbMovies) {
+      res.json(dbMovies);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
 };
