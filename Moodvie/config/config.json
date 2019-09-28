@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "julio",
-    "database": "exampledb",
+    "password": "password",
+    "database": "moodviedb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "password",
-    "database": "testdb",
+    "database": "moodviedb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
