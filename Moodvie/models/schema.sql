@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS moodviedb;
 CREATE DATABASE moodviedb;
 
 USE moodviedb;
@@ -8,8 +7,8 @@ CREATE TABLE movies
 	title varchar(255) NOT NULL,
 	rating varchar(10) NOT NULL,
     genre varchar(100) NOT NULL,
-    total_rating NUMERIC (5) DEFAULT 0,
-    total_raters NUMERIC (30) DEFAULT 0,
+    total_rating DECIMAL (5,0) DEFAULT 0,
+    total_raters DECIMAL (30,0) DEFAULT 0,
     avg_rating DECIMAL(5.10) DEFAULT 0,
     watch_myself BOOLEAN DEFAULT false,
 	watch_boo BOOLEAN DEFAULT false,    

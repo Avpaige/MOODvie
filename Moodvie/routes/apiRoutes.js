@@ -1,24 +1,25 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/genres/:genres", function(req, res) {
+    db.genres.findAll({
+      }).then(function(dbGenres) {
+      console.log(res)
+      res.json(dbGenres);
+      
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+    //       //GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+  // app.get("/api/movies", function(req, res) {
+  //   db.Example.findAll({
+  //     where: {
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+
+  //     }
+  //   }).then(function(dbMovies) {
+  //     res.json(dbMovies);
+  //   });
+  // });
+
 };
