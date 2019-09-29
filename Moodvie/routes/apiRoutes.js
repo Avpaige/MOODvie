@@ -2,25 +2,24 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/genres/:genres", function(req, res) {
-    db.Genres.findAll({
-      where: {
-        genres: req.params.genres
-      },
-      limit: 5
-    }).then(function(dbGenres) {
+    db.genres.findAll({
+      }).then(function(dbGenres) {
+      console.log(res)
       res.json(dbGenres);
+      
     });
   });
 
-  app.get("/api/movies", function(req, res) {
-    db.Example.findAll({
-      where: {
-        //GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+    //       //GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+  // app.get("/api/movies", function(req, res) {
+  //   db.Example.findAll({
+  //     where: {
 
-      }
-    }).then(function(dbMovies) {
-      res.json(dbMovies);
-    });
-  });
+
+  //     }
+  //   }).then(function(dbMovies) {
+  //     res.json(dbMovies);
+  //   });
+  // });
 
 };
