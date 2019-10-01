@@ -5,8 +5,7 @@ module.exports = function(app) {
     db.genres.findAll({
       }).then(function(dbGenres) {
       console.log(res)
-      res.json(dbGenres);
-      
+      res.json(dbGenres);     
     });
   });
 
