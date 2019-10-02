@@ -31,7 +31,7 @@ function showById(id) {
     axios.get('http://api-public.guidebox.com/v2/movies/' + id + '?api_key='
       + guidebox + '&sources=free,subscription,tv_everywhere,purchase')
       .then(response => {
-        resolve(response)
+        resolve(response.data)
         let results = response.data.purchase_web_sources;
         for (var i = 0; i < results.length; i++) {
           console.log(results[i].source);
