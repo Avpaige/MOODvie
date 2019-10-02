@@ -79,27 +79,24 @@ module.exports = function (app) {
       });
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
+ 
 
 
 //Show film result info once clicked
   app.get("/showMovie/:id", function (req, res) {
-  db.genres.findAll({
+  db.genres.findOne({
     where: {
      id: req.params.id
-    },
-    limit: 6
+     },
   })
-    .then(function (dbGenres) {
+    .then(function (titleID) {
       var titleData = {
-        id: dbGenres
+        id: titleID
       }
 
       res.render("viewGenre", titleData);
       console.log(titleData)
+      console.log(id , "ID IS HERE")
     });
   });
   //   function showById(id) {
@@ -116,5 +113,12 @@ module.exports = function (app) {
   //         console.log(error);
   //     });
   // }
+
+
+ // Render 404 page for any unmatched routes
+ app.get("*", function (req, res) {
+  res.render("404");
+});
+
 
 };
