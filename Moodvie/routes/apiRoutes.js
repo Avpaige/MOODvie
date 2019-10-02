@@ -12,7 +12,7 @@ app.get("/api/genres/:genres", function(req, res) {
     })
         .then(function(dbGenres) {
           apiGuide.searchMovie(dbGenres)
-              console.log(dbGenres);
+              // console.log(dbGenres);
               res.json(dbGenres);
       
     });
