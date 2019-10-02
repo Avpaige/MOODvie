@@ -1,8 +1,7 @@
 var client = require('guidebox');
-var keys = require('./keys.js');
+var keys = require('../config/keys.js');
 var axios = require('axios');
-
-var guidebox = (keys.guidebox);
+var guidebox = keys.guidebox;
 
 // Search by movie name
 function searchMovie() {
@@ -58,5 +57,9 @@ function viewSources() {
     });
 }
 
-module.exports(client);
-
+module.exports = {
+  viewSources: viewSources,
+  showPosters: showPosters,
+  showById: showById,
+  searchMovie: searchMovie
+}

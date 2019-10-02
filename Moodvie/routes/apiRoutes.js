@@ -1,4 +1,5 @@
 var db = require("../models");
+var apiGuide = require("../helpers/guidebox.js")
 
 module.exports = function(app) {
 app.get("/api/genres/:genres", function(req, res) {
@@ -10,6 +11,7 @@ app.get("/api/genres/:genres", function(req, res) {
       }
     })
         .then(function(dbGenres) {
+          apiGuide.searchMovie(dbGenres)
               console.log(dbGenres);
               res.json(dbGenres);
       
