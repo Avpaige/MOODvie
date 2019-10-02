@@ -1,9 +1,9 @@
 // subquestions for q1
-const subquestionsQ1 = [
+const subquestion = [
     // for laugh
     {
         emotion: "laugh",
-        question1a: "I want to laugh at...",
+        question: "I want to laugh at...",
         answers: {
             a: "Dirty Jokes",
             b: "Wholesome Jokes",
@@ -15,7 +15,7 @@ const subquestionsQ1 = [
     // for cry
     {
         emotion: "cry",
-        question1b: "I want to cry because I...",
+        question: "I want to cry because I...",
         answers: {
             a: "... had a bad day",
             b: "...got dumped",
@@ -27,7 +27,7 @@ const subquestionsQ1 = [
     // for learn
     {
         emotion: "learn",
-        question1c: "I want to learn...",
+        question: "I want to learn...",
         answers: {
             a: "...something new",
             b: "...about a true story",
@@ -39,7 +39,7 @@ const subquestionsQ1 = [
     // for sentiment
     {
         emotion: "sentiment",
-        question1d: "I want to be moved...",
+        question: "I want to be moved...",
         answers: {
             a: "...to action",
             b: "...to tears",
@@ -51,7 +51,7 @@ const subquestionsQ1 = [
     // for action
     {
         emotion: "action",
-        question1e: "I want to watch someone",
+        question: "I want to watch someone",
         answers: {
             a: "FIGHT!!!",
             b: "BLOW SHIT UP!!!",
@@ -60,10 +60,10 @@ const subquestionsQ1 = [
         }
     },
 
-    // for sleep 
+    // for relaxing 
     {
-        emotion: "sleep",
-        question1f: "I want to have...",
+        emotion: "relax",
+        question: "I want to have...",
         answers: {
             a: "...weird dreams",
             b: "...sweet dreams",
@@ -74,7 +74,7 @@ const subquestionsQ1 = [
     // for horror
     {
         emotion: "horror",
-        question1g: "I want to be scared by...",
+        question: "I want to be scared by...",
         answers: {
             a: "Ghosts",
             b: "Zombies, Vampires, Monsters, oh my!",
@@ -89,9 +89,10 @@ $("#dynamic").hide();
 var questionMood = mood1;
 
 $("#dynamic").show(function () {
-    for (i = 0; i < subquestionsQ1.length; i++) {
-        if (subquestionsQ1[i].emotion = questionMood) {
-            $("#dynamic")
+    for (i = 0; i < subquestion.length; i++) {
+        if (subquestion[i].emotion === questionMood) {
+            // get corresponding object from array
+            // us subquestionsQ1[i].question
         }
     }
 });
