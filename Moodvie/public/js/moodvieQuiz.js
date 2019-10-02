@@ -1,21 +1,5 @@
-// questions
-const myQuestions = [
-    // initial emotion
-    {
-        question1: "I want a movie that will make me...",
-        answers: {
-            a: "Laugh",
-            b: "Cry",
-            c: "Think",
-            d: "Sentimental",
-            e: "Scared",
-            f: "Pumped",
-            g: "Sleepy"
-        }
-    },
-
-    // conditional questions from answer to q1
-    
+// subquestions for q1
+const subquestionsQ1 = [
     // for Laughs
     {
         question1a: "I want to laugh at...",
@@ -26,7 +10,7 @@ const myQuestions = [
             d: "Anything"
         }
     },
-    
+
     // for Tears
     {
         question1b: "I want to cry because I...",
@@ -48,7 +32,7 @@ const myQuestions = [
             d: "...some dinner party talking points"
         }
     },
-    
+
     // for sentiments
     {
         question1d: "I want to be moved...",
@@ -59,7 +43,7 @@ const myQuestions = [
             d: "...by petty shit"
         }
     },
-    
+
     // for adrenaline
     {
         question1e: "I want to watch someone",
@@ -70,16 +54,14 @@ const myQuestions = [
             d: "GET REVENGE!!!"
         }
     },
-    
-    // for trippy sh*t
-    {
-        question1f: "I want to have...",
-        answers: {
-            a: "...weird dreams",
-            b: "...sweet dreams",
-            c: "...nightmares",
-            d: "...a far out trip. Take the wheel!"
-        }
+
+    // for sleep 
+    question1f: "I want to have...",
+    answers: {
+        a: "...weird dreams",
+        b: "...sweet dreams",
+        c: "...nightmares",
+        d: "...a far out trip!"
     },
 
     // for horror
@@ -91,56 +73,14 @@ const myQuestions = [
             c: "Creeps IRL",
             d: "any phobia"
         }
-    },
-
-    // type of audience (maybe tie in MPAA Rating?)
-    {
-        question2: "Who are you watching with?",
-        answers: {
-            a: "Myself",
-            b: "My Significant Other",
-            c: "My Family",
-            d: "My Squad",
-            e: "None of your business!"
-        }
-    },
+    }
 ];
 
-// logic for quiz questions
-// quiz will dynamically switch based on q1
-// user only answers a total of 3 questions
+$("#dynamic").hide();
 
-function quiz(answerToQ1) {
-    switch (answerToQ1git ) {
-        case "laugh":
-        genre = "laugh";
-          console.log("laugh");
-          laughFunc(genre);
-          break;
-        case 1:
-          day = "cry";
-          break;
-        case 2:
-           day = "think";
-          break;
-        case 3:
-          day = "sentimental";
-          break;
-        case 4:
-          day = "scared";
-          break;
-        case 5:
-          day = "pumped";
-          break;
-        case 6:
-          day = "sleepy";
-      }
-}
-quiz(normalizedAnswer);
-function laughFunc(answer2) {
-    switch (answer2) {
-        case: "myself"
-        break;
-    }
-    return answer2
-}
+$("#dynamic").show(function () {
+    var showQ3 = 
+})
+
+// hide question 3
+// when question 1 is answered, find corresponding question from subquestionsQ1
