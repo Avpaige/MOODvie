@@ -70,8 +70,12 @@ module.exports = function(app) {
       limit: 6
     })
         .then(function(dbGenres) {
-          res.render("viewGenre", dbGenres);
-          console.log(dbGenres)
+          var renderData ={
+            genreMovies: dbGenres
+          }
+
+          res.render("viewGenre", renderData);
+          console.log(renderData)
     });
   });
 
