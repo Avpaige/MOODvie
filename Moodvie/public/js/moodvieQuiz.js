@@ -1,7 +1,8 @@
 // subquestions for q1
 const subquestionsQ1 = [
-    // for Laughs
+    // for laugh
     {
+        emotion: "laugh",
         question1a: "I want to laugh at...",
         answers: {
             a: "Dirty Jokes",
@@ -11,8 +12,9 @@ const subquestionsQ1 = [
         }
     },
 
-    // for Tears
+    // for cry
     {
+        emotion: "cry",
         question1b: "I want to cry because I...",
         answers: {
             a: "... had a bad day",
@@ -22,8 +24,9 @@ const subquestionsQ1 = [
         }
     },
 
-    // for the brain
+    // for learn
     {
+        emotion: "learn",
         question1c: "I want to learn...",
         answers: {
             a: "...something new",
@@ -33,8 +36,9 @@ const subquestionsQ1 = [
         }
     },
 
-    // for sentiments
+    // for sentiment
     {
+        emotion: "sentiment",
         question1d: "I want to be moved...",
         answers: {
             a: "...to action",
@@ -44,8 +48,9 @@ const subquestionsQ1 = [
         }
     },
 
-    // for adrenaline
+    // for action
     {
+        emotion: "action",
         question1e: "I want to watch someone",
         answers: {
             a: "FIGHT!!!",
@@ -56,16 +61,19 @@ const subquestionsQ1 = [
     },
 
     // for sleep 
-    question1f: "I want to have...",
-    answers: {
-        a: "...weird dreams",
-        b: "...sweet dreams",
-        c: "...nightmares",
-        d: "...a far out trip!"
-    },
+    {
+        emotion: "sleep",
+        question1f: "I want to have...",
+        answers: {
+            a: "...weird dreams",
+            b: "...sweet dreams",
+            c: "...nightmares",
+            d: "...a far out trip!"
+        },
 
     // for horror
     {
+        emotion: "horror",
         question1g: "I want to be scared by...",
         answers: {
             a: "Ghosts",
@@ -78,9 +86,12 @@ const subquestionsQ1 = [
 
 $("#dynamic").hide();
 
-$("#dynamic").show(function () {
-    var showQ3 = 
-})
+var questionMood = mood1;
 
-// hide question 3
-// when question 1 is answered, find corresponding question from subquestionsQ1
+$("#dynamic").show(function () {
+    for (i = 0; i < subquestionsQ1.length; i++) {
+        if (subquestionsQ1[i].emotion = questionMood) {
+            $("#dynamic")
+        }
+    }
+})
