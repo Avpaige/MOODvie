@@ -1,0 +1,13 @@
+<img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
+<div class="container-fluid">
+    <p class="text-center text-light resultTitle">You've Never Seen Genres Like This!</p>
+
+    <div id="titles">
+        {{#each genreMovies}}
+        <div class="titles">
+            {{title}}
+            <br>
+            <a href="/showMovie/{{id}}">Find out where you can watch this movie now!</a>
+        </div>
+        {{/each}}
+    </div>
