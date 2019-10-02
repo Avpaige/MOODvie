@@ -1,28 +1,24 @@
 var client = require('guidebox');
 var keys = require('../config/keys.js');
 var axios = require('axios');
-var guidebox = keys.guidebox;
+var guidebox = keys.guidebox.id;
 
-return new Promise( function(resolve, reject) {
-  resolve({title: "Spiderverse"});
-});
 
-return new Promise(function (resolve, reject) {
   // Search by movie name
-  function searchMovie() {
-    var movie = '';
-    axios.get('http://api-public.guidebox.com/v2/search?api_key=' + guidebox +
-      '&type=movie&field=title&query=' + movie)
-      .then(response => {
-        console.log(response.data.results);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
-});
-
-
+  function searchMovie(movie) {
+    return new Promise( function(resolve, reject) {
+      // resolve({title: "Spiderverse"});
+       axios.get('http://api-public.guidebox.com/v2/search?api_key=' + guidebox +
+        '&type=movie&field=title&query=' + movie)
+        .then(response => {
+          resolve(response)
+          console.log(response.data.results);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    });   
+   }
 
 // Function to show by ID
 function showById() {
