@@ -1,5 +1,6 @@
 var db = require("../models");
 var path = require("path");
+var gbHelper = require("../helpers/guidebox")
 
 module.exports = function (app) {
   // Load index page
@@ -79,42 +80,31 @@ module.exports = function (app) {
       });
   });
 
-  //Show film result info once clicked
+  //Show film result info once clicked. Utilizes Guidebox API
   app.get("/showMovie/:id", function (req, res) {
-    db.genres.findOne({
-      where: {
-        id: req.params.id
-      },
-    })
+    db.genres
+      .findOne({
+        where: {
+          id: req.params.id
+        }
+      })
       .then(function (movie) {
         var titleData = {
           dbMovie: movie
-        }
+        };
+        gbHelper.searchMovie(movie.title)
+          .then(function (gbMovie) {
+            titleData.guideboxMovie = gbMovie;
+            res.render("showMovie", titleData);
+          });
 
-        res.render("showMovie", titleData);
-        console.log(titleData)
       });
   });
-  //   function showById(id) {
-  //     var id = '';
-  //     axios.get('http://api-public.guidebox.com/v2/movies/' + id + '?api_key='
-  //     + guidebox + '&sources=free,subscription,tv_everywhere,purchase')
-  //     .then(response => {
-  //         let results = response.data.purchase_web_sources;
-  //         for (var i = 0; i < results.length; i++) {
-  //             console.log(results[i].source);
-  //         }
-  //     })
-  //     .catch(error => {
-  //         console.log(error);
-  //     });
-  // }
 
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
+    // Render 404 page for any unmatched routes
+    app.get("*", function (req, res) {
+      res.render("404");
+    });
 
-
-};
+  };
