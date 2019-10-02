@@ -79,25 +79,21 @@ module.exports = function (app) {
       });
   });
 
- 
-
-
-//Show film result info once clicked
+  //Show film result info once clicked
   app.get("/showMovie/:id", function (req, res) {
-  db.genres.findOne({
-    where: {
-     id: req.params.id
-     },
-  })
-    .then(function (titleID) {
-      var titleData = {
-        id: titleID
-      }
+    db.genres.findOne({
+      where: {
+        id: req.params.id
+      },
+    })
+      .then(function (movie) {
+        var titleData = {
+          dbMovie: movie
+        }
 
-      res.render("viewGenre", titleData);
-      console.log(titleData)
-      console.log(id , "ID IS HERE")
-    });
+        res.render("showMovie", titleData);
+        console.log(titleData)
+      });
   });
   //   function showById(id) {
   //     var id = '';
@@ -115,10 +111,10 @@ module.exports = function (app) {
   // }
 
 
- // Render 404 page for any unmatched routes
- app.get("*", function (req, res) {
-  res.render("404");
-});
+  // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 
 
 };
