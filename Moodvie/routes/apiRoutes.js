@@ -1,11 +1,18 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/genres/:genres", function(req, res) {
+app.get("/api/genres/:genres", function(req, res) {
+    console.log("REQ.BODY");
+    console.log(req.params.genres);
     db.genres.findAll({
-      }).then(function(dbGenres) {
-      console.log(res)
-      res.json(dbGenres);     
+      where: {
+        genre: req.params.genres
+      }
+    })
+        .then(function(dbGenres) {
+              console.log(dbGenres);
+              res.json(dbGenres);
+      
     });
   });
 
