@@ -63,10 +63,19 @@ module.exports = function(app) {
 
 
   app.get("/genres/:genreName", function(req, res) {
-    res.render("viewGenre");
+     db.genres.findAll({
+      where: {
+        genre: req.params.genreName
+      },
+      limit: 6
+    })
+        .then(function(dbGenres) {
+          res.render("viewGenre", dbGenres);
+          console.log(dbGenres)
+    });
   });
 
-  // Render 404 page for any unmatched routes
+   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
