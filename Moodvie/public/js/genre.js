@@ -52,7 +52,7 @@ function closeBtn(){
 ]
 
 
-  getGenres();
+ 
   $("#results").hide();
   $("#pageBtns").hide();
   $(".row").on("click", searchGenres);
