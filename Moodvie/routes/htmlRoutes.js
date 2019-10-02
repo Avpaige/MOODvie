@@ -1,22 +1,22 @@
 var db = require("../models");
 var path = require("path");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
     res.render("index");
   });
 
   //load welcome page
-  app.get("/welcome.html", function(req, res) {
+  app.get("/welcome.html", function (req, res) {
     res.render("welcome");
   });
 
 
   //load genre page
-  app.get("/results.html", function(req, res) {
+  app.get("/results.html", function (req, res) {
     var genres = [
-      {   
+      {
         genre: "Bad Ass Women",
         img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
@@ -37,50 +37,84 @@ module.exports = function(app) {
         img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
       {
-          genre: "Cinderella Complex",
-          img: "/img/MOODVIEiconsandposter/images.jpeg"
+        genre: "Cinderella Complex",
+        img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
       {
-          genre: "Toys That Come to Life",
-          img: "/img/MOODVIEiconsandposter/images.jpeg"
+        genre: "Toys That Come to Life",
+        img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
       {
-          genre: "YA All Day",
-          img: "/img/MOODVIEiconsandposter/images.jpeg"
+        genre: "YA All Day",
+        img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
       {
-          genre: "Chef it Up",
-          img: "/img/MOODVIEiconsandposter/images.jpeg"
+        genre: "Chef it Up",
+        img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
       {
-         genre: "Professional Social Media Stalkers",
-         img: "/img/MOODVIEiconsandposter/images.jpeg"
+        genre: "Professional Social Media Stalkers",
+        img: "/img/MOODVIEiconsandposter/images.jpeg"
       },
-  ]
-    res.render("genres", {genresData:genres});
-    
+    ]
+    res.render("genres", { genresData: genres });
+
   });
 
 
-  app.get("/genres/:genreName", function(req, res) {
-     db.genres.findAll({
+  app.get("/genres/:genreName", function (req, res) {
+    db.genres.findAll({
       where: {
         genre: req.params.genreName
       },
       limit: 6
     })
-        .then(function(dbGenres) {
-          var renderData ={
-            genreMovies: dbGenres
-          }
+      .then(function (dbGenres) {
+        var renderData = {
+          genreMovies: dbGenres
+        }
 
-          res.render("viewGenre", renderData);
-          console.log(renderData)
-    });
+        res.render("viewGenre", renderData);
+        console.log(renderData)
+      });
   });
 
-   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
     res.render("404");
   });
+
+
+//Show film result info once clicked
+  app.get("/showMovie/:id", function (req, res) {
+  db.genres.findAll({
+    where: {
+     id: req.params.id
+    },
+    limit: 6
+  })
+    .then(function (dbGenres) {
+      var titleData = {
+        id: dbGenres
+      }
+
+      res.render("viewGenre", titleData);
+      console.log(titleData)
+    });
+  });
+  //   function showById(id) {
+  //     var id = '';
+  //     axios.get('http://api-public.guidebox.com/v2/movies/' + id + '?api_key='
+  //     + guidebox + '&sources=free,subscription,tv_everywhere,purchase')
+  //     .then(response => {
+  //         let results = response.data.purchase_web_sources;
+  //         for (var i = 0; i < results.length; i++) {
+  //             console.log(results[i].source);
+  //         }
+  //     })
+  //     .catch(error => {
+  //         console.log(error);
+  //     });
+  // }
+
 };

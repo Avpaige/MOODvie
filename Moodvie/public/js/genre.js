@@ -1,15 +1,15 @@
-$(document).ready(function() {
-    
- 
-function closeBtn(){
+$(document).ready(function () {
+
+
+  function closeBtn() {
     $("#results").hide();
     $("pageBtns").hide();
     $("#genreDiv").show();
     $(".genreData").empty();
-}
+  }
 
   var genres = [
-    {   
+    {
       genre: "Bad Ass Women",
       img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
@@ -30,29 +30,29 @@ function closeBtn(){
       img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
     {
-        genre: "Cinderella Complex",
-        img: "../img/MOODVIEiconsandposter/images.jpeg"
+      genre: "Cinderella Complex",
+      img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
     {
-        genre: "Toys That Come to Life",
-        img: "../img/MOODVIEiconsandposter/images.jpeg"
+      genre: "Toys That Come to Life",
+      img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
     {
-        genre: "YA All Day",
-        img: "../img/MOODVIEiconsandposter/images.jpeg"
+      genre: "YA All Day",
+      img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
     {
-        genre: "Chef it Up",
-        img: "../img/MOODVIEiconsandposter/images.jpeg"
+      genre: "Chef it Up",
+      img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
     {
-       genre: "Professional Social Media Stalkers",
-       img: "../img/MOODVIEiconsandposter/images.jpeg"
+      genre: "Professional Social Media Stalkers",
+      img: "../img/MOODVIEiconsandposter/images.jpeg"
     },
-]
+  ]
 
 
- 
+
   $("#results").hide();
   $("#pageBtns").hide();
   $(".row").on("click", searchGenres);
@@ -74,13 +74,13 @@ function closeBtn(){
       header.text(genres[i].genre);
       newDiv.attr("data-genre", genres[i].genre);
       $("#genreDiv").append(newDiv);
-    //   console.log(genres[i].img, "here's the image");
-   }
-}
+      //   console.log(genres[i].img, "here's the image");
+    }
+  }
   function searchGenres() {
     $("#genreDiv").hide();
     var search = $(this).attr("data-genre");
-    $.get("/api/genres/" + search, function(data) {
+    $.get("/api/genres/" + search, function (data) {
       for (var i = 0; i < data.length; i++) {
         console.log(data);
         var titles = [];
@@ -100,7 +100,7 @@ function closeBtn(){
         //   var movie = titles[i].length;
         //   showPosters(movie)
         //   }
-        };
-      })
-    };
+      };
+    })
+  };
 });

@@ -1,0 +1,18 @@
+<img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
+<div class="container-fluid">
+    <p class="text-center text-light resultTitle">Here are your movies!</p>
+
+    <div id="movies">
+        <button id="closeBtn" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div id="moviesDiv">
+        {{#each titles}}
+        <div class="genres">
+            {{film}}
+            <br>
+        </div>
+        {{/each}}
+    </div>
