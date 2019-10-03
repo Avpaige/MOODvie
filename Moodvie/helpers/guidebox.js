@@ -4,18 +4,18 @@ var axios = require('axios');
 var guidebox = keys.guidebox.id;
 
 
-// Search by movie name
+// Search poster by movie name
 function searchMovie(movie) {
   return new Promise(function (resolve, reject) {
     // resolve({title: "Spiderverse"});
     axios.get('http://api-public.guidebox.com/v2/search?api_key=' + guidebox +
       '&type=movie&field=title&query=' + movie)
       .then(response => {
-        var id= response.data.results[0].id;
+        var id = response.data.results[1].id;
         showById(id)
-        .then(function(guideboxMovie) {
-          resolve(guideboxMovie);
-        });
+          .then(function (guideboxMovie) {
+            resolve(guideboxMovie);
+          });
         console.log(response.data.results[0]);
         console.log(response.data.results[0].id);
       })
@@ -25,7 +25,7 @@ function searchMovie(movie) {
   });
 }
 
-// Function to show by ID
+// Show sources by movie ID
 function showById(id) {
   return new Promise(function (resolve, reject) {
     axios.get('http://api-public.guidebox.com/v2/movies/' + id + '?api_key='
@@ -43,34 +43,34 @@ function showById(id) {
   });
 }
 
-// Function to show poster
+// Function to show poster by movie Id
 function showPosters() {
-      var image = '';
-      axios.get('http://api-public.guidebox.com/v2/movies/' + image + '/images?api_key='
-        + guidebox + '&filter=posters')
-        .then(response => {
-          console.log(response.data.results.posters[1]);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
+  var imageId = '';
+  axios.get('http://api-public.guidebox.com/v2/movies/' + imageId + '/images?api_key='
+    + guidebox + '&filter=posters')
+    .then(response => {
+      console.log(response.data.results.posters[1]);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
 
 // Function to show viewing sources
 function viewSources() {
-      axios.get('http://api-public.guidebox.com/v2/movies?api_key=' + guidebox
-        + '&sources=free,subscription,tv_everywhere,purchase')
-        .then(response => {
-          console.log(response.data.results);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
+  axios.get('http://api-public.guidebox.com/v2/movies?api_key=' + guidebox
+    + '&sources=free,subscription,tv_everywhere,purchase')
+    .then(response => {
+      console.log(response.data.results);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
 
 module.exports = {
-      viewSources: viewSources,
-      showPosters: showPosters,
-      showById: showById,
-      searchMovie: searchMovie
-    }
+  viewSources: viewSources,
+  showPosters: showPosters,
+  showById: showById,
+  searchMovie: searchMovie
+}
