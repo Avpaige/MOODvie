@@ -17,9 +17,9 @@ const subquestion = [
         emotion: "cry",
         question: "I want to cry because I...",
         answers: {
-            a: "... had a bad day",
-            b: "...got dumped",
-            c: "...just need a good cry",
+            a: "had a bad day",
+            b: "got dumped",
+            c: "just need a good cry",
             d: "Leave me alone!"
         }
     },
@@ -29,22 +29,22 @@ const subquestion = [
         emotion: "learn",
         question: "I want to learn...",
         answers: {
-            a: "...something new",
-            b: "...about a true story",
-            c: "...a new way of thinking",
-            d: "...some dinner party talking points"
+            a: "something new",
+            b: "about a true story",
+            c: "a new way of thinking",
+            d: "dinner party talking points"
         }
     },
 
-    // for sentiment
+    // for sentimental
     {
-        emotion: "sentiment",
+        emotion: "sentimental",
         question: "I want to be moved...",
         answers: {
-            a: "...to action",
-            b: "...to tears",
-            c: "...by knowledge",
-            d: "...by petty shit"
+            a: "to action",
+            b: "to tears",
+            c: "by knowledge",
+            d: "by petty shit"
         }
     },
 
@@ -65,10 +65,10 @@ const subquestion = [
         emotion: "relax",
         question: "I want to have...",
         answers: {
-            a: "...weird dreams",
-            b: "...sweet dreams",
-            c: "...nightmares",
-            d: "...a far out trip!"
+            a: "weird dreams",
+            b: "sweet dreams",
+            c: "nightmares",
+            d: "a far out trip!"
         },
 
     // for horror
