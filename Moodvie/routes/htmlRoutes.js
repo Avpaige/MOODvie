@@ -13,6 +13,26 @@ module.exports = function (app) {
     res.render("welcome");
   });
 
+  //load quizpaige
+  app.get("/quiz", function (req, res) {
+    res.render("quiz");
+  });
+
+   //load quiz results
+   app.get("/quizResults", function (req, res) {
+    res.render("quizResults");
+  });
+
+  //contact
+  app.get("/contact", function (req, res) {
+    res.render("contact");
+  });
+
+
+     //load quizpaige
+     app.get("/quiz", function (req, res) {
+      res.render("quiz");
+    });
 
   //load genre page
   app.get("/results.html", function (req, res) {
