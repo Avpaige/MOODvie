@@ -21,13 +21,13 @@
                 <div class="form-group">
                     <label for="FormControlSelect1" class="selectLabel">1. How's your mood?</label>
                     <select multiple class="form-control" size="15" id="FormControlSelect1" name="mood1">
-                        <option class="moodOptions" value="laugh">a. I could use a laugh.</option>
-                        <option class="moodOptions" value="cry">b. I feel like crying...</option>
-                        <option class="moodOptions" value="learn">c. I want to learn.</option>
-                        <option class="moodOptions" value="sentimental">d. I'm feeling sentimental.</option>
-                        <option class="moodOptions" value="action">e. I WANT ACTION!!!</option>
-                        <option class="moodOptions" value="relax">f. I could use a sleep aid.</option>
-                        <option class="moodOptions" value="horror">g. Scare me!</option>
+                        <option class="moodOptions" value="laugh_">a. I could use a laugh.</option>
+                        <option class="moodOptions" value="cry_">b. I feel like crying...</option>
+                        <option class="moodOptions" value="think_">c. I want to learn.</option>
+                        <option class="moodOptions" value="emotion_">d. I'm feeling sentimental.</option>
+                        <option class="moodOptions" value="amp_">e. I WANT ACTION!!!</option>
+                        <option class="moodOptions" value="sleep_">f. I could use a sleep aid.</option>
+                        <option class="moodOptions" value="scare_">g. Scare me!</option>
                     </select>
                 </div>
             </div>
@@ -43,15 +43,80 @@
                     </select>
                 </div>
             </div>
-            <div class="col-lg-4 text-center" id="dynamic">
+            <div class="col-lg-4 text-center goAway" id="laugh">
                 <div class="form-group">
-                    <label for="FormControlSelect3" class="selectLabel">3. I would like to...</label>
+                    <label for="FormControlSelect3" class="selectLabel">3. I want to laugh at...</label>
                     <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
-                        <option class="moodOptions">a. Like Rick James Bitch</option>
-                        <option class="moodOptions">b. I have a case of the Munday's</option>
-                        <option class="moodOptions">c .Not So Much</option>
-                        <option class="moodOptions">d. Baller But Still Broke</option>
-                        <option class="moodOptions">e. Go to hell you filthy animal!</option>
+                        <option class="moodOptions" id="laugh_wholesome">a. Wholesome jokes</option>
+                        <option class="moodOptions" id="laugh_inappropiate">b. Dirty jokes</option>
+                        <option class="moodOptions" id="laugh_bad_movie">c. A "so bad, it's good" movie</option>
+                        <option class="moodOptions" id="laugh_in_general">d. Anything</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="cry">
+                <div class="form-group">
+                    <label for="FormControlSelect4" class="selectLabel">3. I'm crying because...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="cry_rough_day">a. I had a rough day</option>
+                        <option class="moodOptions" id="cry_dumped">b. I got dumped</option>
+                        <option class="moodOptions" id="cry_cry">c. I just need a good cry</option>
+                        <option class="moodOptions" id="cry_leave_alone">d. I just want to be left alone!</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="think">
+                <div class="form-group">
+                    <label for="FormControlSelect5" class="selectLabel">3. I want to learn...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="think_true_story">a. About a true story</option>
+                        <option class="moodOptions" id="think_challenge">b. About a new way of thinking</option>
+                        <option class="moodOptions" id="think_small_talk">c. Some insightful talking points</option>
+                        <option class="moodOptions" id="think_learn">d. Anything</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="emotion">
+                <div class="form-group">
+                    <label for="FormControlSelect6" class="selectLabel">3. I want to be inspired...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="emotion_action">a. into action for a cause</option>
+                        <option class="moodOptions" id="emotion_tears">b. by a heartwarming story</option>
+                        <option class="moodOptions" id="emotion_learn">c. by knowledge</option>
+                        <option class="moodOptions" id="emotion_drama">d. by petty drama</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="amp">
+                <div class="form-group">
+                    <label for="FormControlSelect7" class="selectLabel">3. I WANT TO SEE...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="amp_kick_ass">a. SOME ASS-KICKING!!!</option>
+                        <option class="moodOptions" id="amp_system">b. REBELLION AGAINST THE SYSTEM!!!</option>
+                        <option class="moodOptions" id="amp_blow_up">c. STUFF BLOWING UP!!!</option>
+                        <option class="moodOptions" id="amp_revenge">d. SOME VENGEANCE!!!</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="sleep">
+                <div class="form-group">
+                    <label for="FormControlSelect8" class="selectLabel">3. I want a movie that...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="sleep_sweet_dreams">a. gives me sweet dreams</option>
+                        <option class="moodOptions" id="sleep_weird_dreams">b. gives me weird dreams</option>
+                        <option class="moodOptions" id="sleep_scary_dreams">c. gives me nightmares</option>
+                        <option class="moodOptions" id="sleep_surprise_me">d. helps me sleep</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center goAway" id="scare">
+                <div class="form-group">
+                    <label for="FormControlSelect9" class="selectLabel">3. Scare me with...</label>
+                    <select multiple class="form-control" size="15" id="FormControlSelect3" name="mood3">
+                        <option class="moodOptions" id="scare_ghosts">a. ghosts</option>
+                        <option class="moodOptions" id="scare_monsters">b. monsters, vampires, werewolves, oh my!</option>
+                        <option class="moodOptions" id="scare_irl_creeps">c. creeps IRL</option>
+                        <option class="moodOptions" id="sleep_whatever">d. Any phobia</option>
                     </select>
                 </div>
             </div>
