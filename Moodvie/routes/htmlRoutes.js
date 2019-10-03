@@ -13,11 +13,12 @@ module.exports = function (app) {
     res.render("welcome");
   });
 
-  //load quizpaige
+  //load quizpage
   app.get("/quiz", function (req, res) {
     res.render("quiz");
   });
 
+<<<<<<< HEAD
    //load quiz results
    app.get("/quizResults:", function (req, res) {
      db.genres.findAll({
@@ -25,6 +26,10 @@ module.exports = function (app) {
          
        }
      })
+=======
+  //load quiz results
+  app.get("/quizResults", function (req, res) {
+>>>>>>> 4adc9ec5ccbd65356501c2608d66cf15692e117f
     res.render("quizResults");
   });
 

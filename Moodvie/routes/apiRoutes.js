@@ -18,7 +18,32 @@ module.exports = function (app) {
       });
   });
 
+<<<<<<< HEAD
   //       //GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+=======
+  // GABRIEL NEED YOU TO ADD ROUTES HERE FOR SURVEY VALUES
+  // app.get("/api/surveyResults/laugh/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/cry/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/learn/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/sentimental/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/action/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/relax/:", function (req, res)) {
+  //   db.genres.
+  // }
+  // app.get("/api/surveyResults/horror/:", function (req, res)) {
+  //   db.genres.
+  // }
+>>>>>>> 4adc9ec5ccbd65356501c2608d66cf15692e117f
   // app.get("/api/movies", function(req, res) {
   //   db.Example.findAll({
   //     where: {
