@@ -84,15 +84,15 @@ const subquestion = [
     }
 ];
 
-$("#dynamic").hide();
+// $("#dynamic").hide();
 
-var questionMood = mood1;
+// var questionMood = mood1;
 
-$("#dynamic").show(function () {
-    for (i = 0; i < subquestion.length; i++) {
-        if (subquestion[i].emotion === questionMood) {
-            // get corresponding object from array
-            // us subquestionsQ1[i].question
-        }
-    }
-});
+// $("#dynamic").show(function () {
+//     for (i = 0; i < subquestion.length; i++) {
+//         if (subquestion[i].emotion === questionMood) {
+//             // get corresponding object from array
+//             // us subquestionsQ1[i].question
+//         }
+//     }
+// });
