@@ -1,6 +1,6 @@
 <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
 <div class="container-fluid">
-    <p class="text-center text-light resultTitle">Here are your movies!</p>
+    <p class="text-center text-light resultTitle">Here's your selection, happy streaming!</p>
 
     <div id="movies">
         <button id="closeBtn" type="button" class="close" aria-label="Close">
@@ -9,10 +9,21 @@
     </div>
 
     <div id="moviesDiv">
-                 <img src="{{gbMovie.poster_120x171}}"> 
-                 {{gbMovie.title}}
-                 {{gbMovie.release_year}}
-                 {{gbMovie.rating}}
-            <br>
-         
+        <img src="{{gbMovie.poster_120x171}}">
+        <br>
+        <p>Title:</p> {{gbMovie.title}}
+        <br>
+        <p>Release Year:</p> {{gbMovie.release_year}}
+        <br>
+        <p>Rating:</p> {{gbMovie.rating}}
+        <br>
+        <p>Catch this flick on any of these plaforms:</p>
+        <div id="stream">
+            {{#each guideboxMovie}}
+            <div class="view">
+              <p>{{guideboxMovie.purchase_web_sourceslink.display_name}}:</p> <a href={{guideboxMovie.purchase_web_sourceslink.link}}>Check it out!</a>
+            </div>
+            {{/each}}
+        </div>
+
     </div>

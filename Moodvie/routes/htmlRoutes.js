@@ -116,7 +116,6 @@ module.exports = function (app) {
             titleData.gbMovie = gbMovie;
             res.render("showMovie", titleData);
           });
-
       });
   });
 
