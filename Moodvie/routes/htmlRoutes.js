@@ -13,6 +13,20 @@ module.exports = function (app) {
     res.render("welcome");
   });
 
+  //load quizpage
+  app.get("/quiz", function (req, res) {
+    res.render("quiz");
+  });
+
+  //load quiz results
+  app.get("/quizResults", function (req, res) {
+    res.render("quizResults");
+  });
+
+  //contact
+  app.get("/contact", function (req, res) {
+    res.render("contact");
+  });
 
   //load genre page
   app.get("/results.html", function (req, res) {
@@ -97,14 +111,13 @@ module.exports = function (app) {
             titleData.gbMovie = gbMovie;
             res.render("showMovie", titleData);
           });
-
       });
   });
 
 
-    // Render 404 page for any unmatched routes
-    app.get("*", function (req, res) {
-      res.render("404");
-    });
+  // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 
-  };
+};
