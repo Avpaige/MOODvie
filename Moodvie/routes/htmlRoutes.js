@@ -19,7 +19,12 @@ module.exports = function (app) {
   });
 
    //load quiz results
-   app.get("/quizResults", function (req, res) {
+   app.get("/quizResults:", function (req, res) {
+     db.genres.findAll({
+       where: {
+         
+       }
+     })
     res.render("quizResults");
   });
 
@@ -27,12 +32,6 @@ module.exports = function (app) {
   app.get("/contact", function (req, res) {
     res.render("contact");
   });
-
-
-     //load quizpaige
-     app.get("/quiz", function (req, res) {
-      res.render("quiz");
-    });
 
   //load genre page
   app.get("/results.html", function (req, res) {
@@ -121,8 +120,6 @@ module.exports = function (app) {
       });
   });
 
-  // Render survey results
-  app.get("/surveyResults:")
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
