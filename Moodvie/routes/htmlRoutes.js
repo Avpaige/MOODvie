@@ -108,7 +108,7 @@ module.exports = function (app) {
         };
         gbHelper.searchMovie(movie.title)
           .then(function (gbMovie) {
-            titleData.gbMovie = gbMovie;
+              titleData.gbMovie = gbMovie;
             res.render("showMovie", titleData);
           });
       });
