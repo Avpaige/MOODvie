@@ -19,9 +19,9 @@
         <br>
         <p>Catch this flick on any of these plaforms:</p>
         <div id="stream">
-            {{#each guideboxMovie}}
+            {{#each gbMovie}}
             <div class="view">
-              <p>{{guideboxMovie.purchase_web_sourceslink.display_name}}:</p> <a href={{guideboxMovie.purchase_web_sourceslink.link}}>Check it out!</a>
+              <p>{{gbMovie.purchase_web_sourceslink.display_name}}:</p> <a href={{gbMovie.purchase_web_sourceslink.link}}>Check it out!</a>
             </div>
             {{/each}}
         </div>
