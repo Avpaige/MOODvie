@@ -18,8 +18,13 @@ module.exports = function (app) {
     res.render("quiz");
   });
 
-  //load quiz results
-  app.get("/quizResults", function (req, res) {
+   //load quiz results
+   app.get("/quizResults", function (req, res) {
+     db.genres.findAll({
+       where: {
+         
+       }
+     })
     res.render("quizResults");
   });
 
@@ -108,7 +113,7 @@ module.exports = function (app) {
         };
         gbHelper.searchMovie(movie.title)
           .then(function (gbMovie) {
-            titleData.gbMovie = gbMovie;
+              titleData.gbMovie = gbMovie;
             res.render("showMovie", titleData);
           });
       });

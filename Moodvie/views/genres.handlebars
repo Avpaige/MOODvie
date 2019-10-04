@@ -1,6 +1,7 @@
+
 <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
 <div class="container-fluid">
-    <p class="text-center text-light resultTitle">Way to go, you're a Whole MOOD!</p>
+    <p class="text-center text-light resultTitle">Movies for your whole MOOD!</p>
 
     <div id="results">
         <button id="closeBtn" type="button" class="close" aria-label="Close">
@@ -15,12 +16,9 @@
 
     <div id="genreDiv">
         {{#each genresData}}
-        <div class="genres">
-            {{genre}}
-            <br>
-            <img src="{{img}}">
-            <a href="/genres/{{genre}}">Click to see movies in this genre!</a>
-        </div>
+        {{genre}}
+        <a href="/genres/{{genre}}" target="_blank"> <img src="{{img}}"></a>
+        <br>
         {{/each}}
     </div>
 

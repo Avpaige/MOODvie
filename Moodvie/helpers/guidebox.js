@@ -4,7 +4,7 @@ var axios = require('axios');
 var guidebox = keys.guidebox.id;
 
 
-// Search by movie name
+// Search poster by movie name
 function searchMovie(movie) {
   return new Promise(function (resolve, reject) {
     axios.get('http://api-public.guidebox.com/v2/search?api_key=' + guidebox +
@@ -24,7 +24,7 @@ function searchMovie(movie) {
   })
 }
 
-// Function to show by ID
+// Show sources by movie ID
 function showById(id) {
   return new Promise(function (resolve, reject) {
     axios.get('http://api-public.guidebox.com/v2/movies/' + id + '?api_key='
@@ -46,7 +46,7 @@ function showById(id) {
   });
 }
 
-// Function to show poster
+// Function to show poster by movie Id
 function showPosters() {
   var image = '';
   axios.get('http://api-public.guidebox.com/v2/movies/' + image + '/images?api_key='
