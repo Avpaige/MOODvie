@@ -19,7 +19,7 @@ module.exports = function (app) {
   });
 
    //load quiz results
-   app.get("/quizResults:", function (req, res) {
+   app.get("/quizResults", function (req, res) {
      db.genres.findAll({
        where: {
          
