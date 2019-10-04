@@ -44,9 +44,9 @@ CREATE TABLE movies
     scare_irl_creep BOOLEAN DEFAULT false,
     scare_whatever BOOLEAN DEFAULT false,
     id int NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (id)
-    createdAt TIMESTAMP NOT NULL,
-    updatedAt TIMESTAMP NOT NULL, 
+    PRIMARY KEY (id),
+    createdAt DATETIME NOT NULL,
+    updatedAt DATETIME NOT NULL
 );
 
 CREATE TABLE genres
