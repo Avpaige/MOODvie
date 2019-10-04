@@ -85,16 +85,30 @@ const subquestion = [
     }
 ];
 
-$(".goAway").hide();
-$(".goAway").hide();
+$(".emotionShown").hide();
 
 var questionMood = $("#FormControlSelect1").val();
 
-$("#dynamic").show(function () {
-    for (i=0; i<subquestion.length; i++) {
-        if (subquestion[i].emotion === questionMood) {
-            console.log(subquestion[i]);
-            
-        }
-    }
-});
+switch(questionMood) {
+    case "laugh":
+        $("#laugh").show();
+        break;
+    case "cry":
+        $("#cry").show();
+        break;
+    case "think":
+        $("#think").show();
+        break;
+    case "emotion":
+        $("#emotion").show();
+        break;
+    case "amp":
+        $("#amp").show();
+        break;
+    case "sleep":
+        $("#sleep").show();
+        break;
+    case "scare":
+        $("#scare").show();
+        break;
+}

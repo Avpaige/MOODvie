@@ -22,7 +22,7 @@ module.exports = function (app) {
    app.get("/quizResults", function (req, res) {
      db.genres.findAll({
        where: {
-         
+         // something happens
        }
      })
     res.render("quizResults");
