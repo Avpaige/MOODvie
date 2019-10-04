@@ -71,7 +71,7 @@ const subquestion = [
             d: "a far out trip!"
         }
     },
-    
+
     // for horror
     {
         emotion: "scare_",
@@ -87,28 +87,37 @@ const subquestion = [
 
 $(".emotionShown").hide();
 
-var questionMood = $("#FormControlSelect1").val();
-
-switch(questionMood) {
-    case "laugh":
-        $("#laugh").show();
-        break;
-    case "cry":
-        $("#cry").show();
-        break;
-    case "think":
-        $("#think").show();
-        break;
-    case "emotion":
-        $("#emotion").show();
-        break;
-    case "amp":
-        $("#amp").show();
-        break;
-    case "sleep":
-        $("#sleep").show();
-        break;
-    case "scare":
-        $("#scare").show();
-        break;
-}
+$('#FormControlSelect1').on('change', function () {
+    var questionMood = this.value;
+    console.log(questionMood);
+    switch (questionMood) {
+        case "laugh":
+            $(".emotionShown").hide();
+            $("#laugh").show();
+            break;
+        case "cry":
+            $(".emotionShown").hide();
+            $("#cry").show();
+            break;
+        case "think":
+            $(".emotionShown").hide();
+            $("#think").show();
+            break;
+        case "emotion":
+            $(".emotionShown").hide();
+            $("#emotion").show();
+            break;
+        case "amp":
+            $(".emotionShown").hide();
+            $("#amp").show();
+            break;
+        case "sleep":
+            $(".emotionShown").hide();
+            $("#sleep").show();
+            break;
+        case "scare":
+            $(".emotionShown").hide();
+            $("#scare").show();
+            break;
+    }
+});
