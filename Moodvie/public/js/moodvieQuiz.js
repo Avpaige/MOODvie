@@ -2,7 +2,7 @@
 const subquestion = [
     // for laugh
     {
-        emotion: "laugh",
+        emotion: "laugh_",
         question: "I want to laugh at...",
         answers: {
             a: "Dirty Jokes",
@@ -14,7 +14,7 @@ const subquestion = [
 
     // for cry
     {
-        emotion: "cry",
+        emotion: "cry_",
         question: "I want to cry because I...",
         answers: {
             a: "had a bad day",
@@ -26,7 +26,7 @@ const subquestion = [
 
     // for learn
     {
-        emotion: "learn",
+        emotion: "think_",
         question: "I want to learn...",
         answers: {
             a: "something new",
@@ -38,7 +38,7 @@ const subquestion = [
 
     // for sentimental
     {
-        emotion: "sentimental",
+        emotion: "emotion_",
         question: "I want to be moved...",
         answers: {
             a: "to action",
@@ -50,7 +50,7 @@ const subquestion = [
 
     // for action
     {
-        emotion: "action",
+        emotion: "amp_",
         question: "I want to watch someone",
         answers: {
             a: "FIGHT!!!",
@@ -62,7 +62,7 @@ const subquestion = [
 
     // for relaxing 
     {
-        emotion: "relax",
+        emotion: "sleep_",
         question: "I want to have...",
         answers: {
             a: "weird dreams",
@@ -73,7 +73,7 @@ const subquestion = [
 
     // for horror
     {
-        emotion: "horror",
+        emotion: "scare_",
         question: "I want to be scared by...",
         answers: {
             a: "Ghosts",
@@ -84,15 +84,16 @@ const subquestion = [
     }
 ];
 
-// $("#dynamic").hide();
+$(".goAway").hide();
+$(".goAway").hide();
 
-// var questionMood = mood1;
+var questionMood = $("#FormControlSelect1").val();
 
-// $("#dynamic").show(function () {
-//     for (i = 0; i < subquestion.length; i++) {
-//         if (subquestion[i].emotion === questionMood) {
-//             // get corresponding object from array
-//             // us subquestionsQ1[i].question
-//         }
-//     }
-// });
+$("#dynamic").show(function () {
+    for (i=0; i<subquestion.length; i++) {
+        if (subquestion[i].emotion === questionMood) {
+            console.log(subquestion[i]);
+            
+        }
+    }
+});
