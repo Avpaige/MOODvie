@@ -69,8 +69,9 @@ const subquestion = [
             b: "sweet dreams",
             c: "nightmares",
             d: "a far out trip!"
-        },
-
+        }
+    },
+    
     // for horror
     {
         emotion: "scare_",

@@ -18,8 +18,13 @@ module.exports = function (app) {
     res.render("quiz");
   });
 
-  //load quiz results
-  app.get("/quizResults", function (req, res) {
+   //load quiz results
+   app.get("/quizResults", function (req, res) {
+     db.genres.findAll({
+       where: {
+         
+       }
+     })
     res.render("quizResults");
   });
 
