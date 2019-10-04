@@ -44,9 +44,9 @@ CREATE TABLE movies
     scare_irl_creep BOOLEAN DEFAULT false,
     scare_whatever BOOLEAN DEFAULT false,
     id int NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (id)
-    createdAt DATETIME,
-    updatedAt DATETIME, 
+    PRIMARY KEY (id),
+    createdAt DATETIME NOT NULL,
+    updatedAt DATETIME NOT NULL
 );
 
 CREATE TABLE genres
@@ -54,8 +54,8 @@ CREATE TABLE genres
 	id int NOT NULL AUTO_INCREMENT,
 	title varchar(255) NOT NULL,
     genre varchar(100) NOT NULL,
-    createdAt DATETIME,
-    updatedAt DATETIME, 
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NOT NULL, 
 	PRIMARY KEY (id)
 );
 
@@ -66,7 +66,7 @@ CREATE TABLE mail_list
 	first_name varchar(150) NOT NULL,
     last_name varchar(150) NOT NULL,
     email varchar(100) NOT NULL,
-    createdAt DATETIME,
-    updatedAt DATETIME, 
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NOT NULL, 
 	PRIMARY KEY (id)
 );
