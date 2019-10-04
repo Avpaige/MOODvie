@@ -1,13 +1,19 @@
+  <head>
+     <title>MOODvie - Movies</title>
+      </head>
+
 <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
 <div class="container-fluid">
-    <p class="text-center text-light resultTitle">You've Never Seen Genres Like This!</p>
-
+    <h1 class="text-center text-light resultTitle">Top Results!</h1>
+    <br>
+    <br>
+    <h3>Take a chance, we wouldn't steer you wrong.</h3>
+    <br>
+    <br>
     <div id="titles">
         {{#each genreMovies}}
         <div class="titles">
-            {{title}}
-            <br>
-            <a href="/showMovie/{{id}}">Find out where you can watch this movie now!</a>
+        <a href="/showMovie/{{id}}" target="_blank">{{title}}</a>
         </div>
         {{/each}}
     </div>
