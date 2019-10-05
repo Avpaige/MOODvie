@@ -25,3 +25,16 @@
 .genre-image-wrapper a:hover {
     background-color: transparent;
 }
+
+.genre-card a:hover{
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.posters{
+
+    width: 250px;
+    height: 300px;
+
+
+}

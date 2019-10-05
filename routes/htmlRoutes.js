@@ -148,43 +148,43 @@ module.exports = function (app) {
     var genres = [
       {
         genre: "Bad Ass Women",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/MOV_8b118638_b.jpg"
       },
       {
         genre: "Getting Even",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/images-2.jpeg"
       },
       {
         genre: "Man vs. Machine",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/exMachina.jpg"
       },
       {
         genre: "Alien Invasion",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/indieDay.jpg"
       },
       {
         genre: "Dragon's In a Supporting Role",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/shrek.jpg"
       },
       {
         genre: "Cinderella Complex",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/moana.jpg"
       },
       {
         genre: "Toys That Come to Life",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/toyStory.jpg"
       },
       {
         genre: "YA All Day",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/simon.jpg"
       },
       {
         genre: "Chef it Up",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/100Foot.jpg"
       },
       {
         genre: "Professional Social Media Stalkers",
-        img: "/img/MOODVIEiconsandposter/images.jpeg"
+        img: "/img/MOODVIEiconsandposter/bourne.jpg"
       },
     ]
     res.render("genres", { genresData: genres });

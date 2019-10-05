@@ -31,3 +31,9 @@ a {
     width: 125
 
   }
+
+  .touch{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 100px;
+  }

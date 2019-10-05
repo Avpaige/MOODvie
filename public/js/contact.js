@@ -14,7 +14,7 @@ $("#submit").on("click", function (event) {
 
             var newDiv = $("<div>");
             newDiv.addClass("thanks");
-            newDiv.append("<p>" + "Thanks " + newMood.first + " we'll email you with the latest news!" + "</p>");
+            newDiv.append("<p>" + "Thanks " + newMood.first + ", we'll email you with the latest news!" + "</p>");
            
             $("#contactContainer").prepend(newDiv);
             console.log("success!")

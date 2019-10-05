@@ -1,20 +1,24 @@
-<link rel="stylesheet" href="/css/genres.css" />
-<img class="moodvieLogo" src="/img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
+<nav class="navbar">
+    <a  href="/">
+        <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
+    </a>
+    <a class=" touch text-light" href="/contact"/>Keep in Touch</a>
+</nav>
+
 <div class="container">
+    <br>
+    <br>
     <h2 class="text-center text-light resultTitle">Movies for your whole MOOD!</h2>
 
-    {{!-- <div id="pageBtns">
-        <a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="next round">&#8250;</a>
-    </div> --}}
-
+    <br>
+    <br>
     <div id="genreDiv" class="row align-center">
 
         {{#each genresData}}
         <div class="col-sm text-center genre-card">
             <a href="/genres/{{genre}}" target="_blank">
                 <div class="genre-image-wrapper">
-                    <img src="{{img}}" />
+                    <img class="posters" src="{{img}}" />
                 </div>
 
                 <h3>
