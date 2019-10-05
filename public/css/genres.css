@@ -1,0 +1,27 @@
+.genre-card {
+
+    background-color: #151617;
+    padding: 15px;
+    margin: 5px;
+    border: solid #000 1px;
+    border-radius: 20px;
+    transition: background-color .2s ease;
+    cursor: hover;
+}
+
+.genre-card:hover {
+    background-color: #212321;
+}
+
+.genre-card h3 {
+    color: #ffffee;
+    margin-top: 10px;
+}
+
+.genre-image-wrapper a {
+    
+}
+
+.genre-image-wrapper a:hover {
+    background-color: transparent;
+}

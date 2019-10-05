@@ -231,7 +231,7 @@ module.exports = function (app) {
 
   app.post("/api/contact", function(req, res) {
     console.log(req.body);
-    db.mail_list.create({
+    db.Contact.create({
       first_name: req.body.first,
       last_name: req.body.last,
       email: req.body.email
