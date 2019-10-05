@@ -18,15 +18,111 @@ module.exports = function (app) {
     res.render("quiz");
   });
 
-   //load quiz results
-   app.get("/quizResults", function (req, res) {
-     db.genres.findAll({
-       where: {
-         // something happens
-       }
-     })
-    res.render("quizResults");
-  });
+  //load quiz results
+  // LAUGH
+  app.get("/quizResults/:laugh_wholesome/:laugh_inappropiate/:laugh_bad_movie/:laugh_in_general",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          laugh_wholesome: true,
+          laugh_inappropiate: true,
+          laugh_bad_movie: true,
+          laugh_in_general: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+  // CRY
+  app.get("/quizResults/:cry_rough_day/:cry_dumped/:cry_cry/:cry_leave_alone",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          cry_rough_day: true,
+          cry_dumped: true,
+          cry_cry: true,
+          cry_leave_alone: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+  // THINK
+  app.get("/quizResults/:think_true_story/:think_challenge/:think_small_talk/:think_learn",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          think_true_story: true,
+          think_challenge: true,
+          think_small_talk: true,
+          think_learn: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+    // EMOTION
+    app.get("/quizResults/:emotion_action/:emotion_tears/:emotion_learn/:emotion_drama",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          emotion_action: true,
+          emotion_tears: true,
+          emotion_learn: true,
+          emotion_drama: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+    // AMP
+    app.get("/quizResults/:amp_kick_ass/:amp_system/:amp_blow_up/:amp_revenge",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          amp_kick_ass: true,
+          amp_system: true,
+          amp_blow_up: true,
+          amp_revenge: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+    // SLEEP
+    app.get("/quizResults/:sleep_sweet_dreams/:sleep_weird_dreams/:sleep_scary_dreams/:sleep_surprise_me",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          sleep_sweet_dreams: true,
+          sleep_weird_dreams: true,
+          sleep_scary_dreams: true,
+          sleep_surprise_me: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
+
+    // SCARE
+    app.get("/quizResults/:scare_ghosts/:scare_monsters/:scare_irl_creeps/:sleep_whatever",
+    function (req, res) {
+      db.movies.findAll({
+        where: {
+          scare_ghosts: true,
+          scare_monsters: true,
+          scare_irl_creeps: true,
+          sleep_whatever: true
+        }
+      }).then(function (dbMovies) {
+        res.render("quizResults", dbMovies);
+      });
+    });
 
   //contact
   app.get("/contact", function (req, res) {
@@ -113,7 +209,7 @@ module.exports = function (app) {
         };
         gbHelper.searchMovie(movie.title)
           .then(function (gbMovie) {
-              titleData.gbMovie = gbMovie;
+            titleData.gbMovie = gbMovie;
             res.render("showMovie", titleData);
           });
       });
