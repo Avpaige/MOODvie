@@ -20,7 +20,7 @@ module.exports = function (app) {
 
   // Load quiz results
   // LAUGH
-  app.get("/quizResults/:laugh_wholesome/:laugh_inappropiate/:laugh_bad_movie/:laugh_in_general",
+  app.get("/survey.html/:laugh_wholesome/:laugh_inappropiate/:laugh_bad_movie/:laugh_in_general",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -37,7 +37,7 @@ module.exports = function (app) {
     });
 
   // CRY
-  app.get("/quizResults/:cry_rough_day/:cry_dumped/:cry_cry/:cry_leave_alone",
+  app.get("/survey.html/:cry_rough_day/:cry_dumped/:cry_cry/:cry_leave_alone",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -54,7 +54,7 @@ module.exports = function (app) {
     });
 
   // THINK
-  app.get("/quizResults/:think_true_story/:think_challenge/:think_small_talk/:think_learn",
+  app.get("/survey.html/:think_true_story/:think_challenge/:think_small_talk/:think_learn",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -71,7 +71,7 @@ module.exports = function (app) {
     });
 
     // EMOTION
-    app.get("/quizResults/:emotion_action/:emotion_tears/:emotion_learn/:emotion_drama",
+    app.get("/survey.html/:emotion_action/:emotion_tears/:emotion_learn/:emotion_drama",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -88,7 +88,7 @@ module.exports = function (app) {
     });
 
     // AMP
-    app.get("/quizResults/:amp_kick_ass/:amp_system/:amp_blow_up/:amp_revenge",
+    app.get("/survey.html/:amp_kick_ass/:amp_system/:amp_blow_up/:amp_revenge",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -105,7 +105,7 @@ module.exports = function (app) {
     });
 
     // SLEEP
-    app.get("/quizResults/:sleep_sweet_dreams/:sleep_weird_dreams/:sleep_scary_dreams/:sleep_surprise_me",
+    app.get("/survey.html/:sleep_sweet_dreams/:sleep_weird_dreams/:sleep_scary_dreams/:sleep_surprise_me",
     function (req, res) {
       db.movies.findAll({
         where: {
@@ -122,7 +122,7 @@ module.exports = function (app) {
     });
 
     // SCARE
-    app.get("/quizResults/:scare_ghosts/:scare_monsters/:scare_irl_creeps/:sleep_whatever",
+    app.get("/survey.html/:scare_ghosts/:scare_monsters/:scare_irl_creeps/:sleep_whatever",
     function (req, res) {
       db.movies.findAll({
         where: {
