@@ -2,6 +2,8 @@ var db = require("../models");
 var apiGuide = require("../helpers/guidebox.js")
 
 module.exports = function (app) {
+
+
   app.get("/api/genres/:genres", function (req, res) {
     console.log("REQ.BODY");
     console.log(req.params.genres);
