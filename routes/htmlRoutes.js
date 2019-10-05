@@ -18,7 +18,7 @@ module.exports = function (app) {
     res.render("quiz");
   });
 
-  //load quiz results
+  // LOAD QUIZ RESULTS
   // LAUGH
   app.get("/quizResults/:laugh_wholesome/:laugh_inappropiate/:laugh_bad_movie/:laugh_in_general",
     function (req, res) {
