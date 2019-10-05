@@ -30,7 +30,7 @@ module.exports = function (app) {
           laugh_in_general: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -47,7 +47,7 @@ module.exports = function (app) {
           cry_leave_alone: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -64,7 +64,7 @@ module.exports = function (app) {
           think_learn: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -81,7 +81,7 @@ module.exports = function (app) {
           emotion_drama: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -98,7 +98,7 @@ module.exports = function (app) {
           amp_revenge: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -115,7 +115,7 @@ module.exports = function (app) {
           sleep_surprise_me: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -132,7 +132,7 @@ module.exports = function (app) {
           sleep_whatever: true
         }
       }).then(function (dbMovies) {
-        res.render("quizResults", dbMovies);
+        res.render("quizResults", dbMovies)
       }).catch(function(error) {
         console.log(error);
      });
@@ -231,7 +231,7 @@ module.exports = function (app) {
 
   app.post("/api/contact", function(req, res) {
     console.log(req.body);
-    db.Contact.create({
+    db.mail_list.create({
       first_name: req.body.first,
       last_name: req.body.last,
       email: req.body.email
