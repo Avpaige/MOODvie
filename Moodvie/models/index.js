@@ -9,7 +9,7 @@ var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
 if (process.env.JAWSDB_URL){
-  connection =  new Sequelize(process.env.JAWSDB_URL);
+  var sequelize =  new Sequelize(process.env.JAWSDB_URL);
 } if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -41,6 +41,4 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-connection.connect();
-module.exports = connection();
 module.exports = db;

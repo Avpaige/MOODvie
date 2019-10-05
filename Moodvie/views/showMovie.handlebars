@@ -1,29 +1,57 @@
+
 <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
 <div class="container-fluid">
-    <p class="text-center text-light resultTitle">Here's your selection, happy streaming!</p>
+    <br>
+    <p class="text-center text-light resultTitle">Here's where you can watch {{gbMovie.title}}, today!</p>
 
     <div id="movies">
-        <button id="closeBtn" type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
-    <div id="moviesDiv">
+         <div id="moviesDiv">
         <img src="{{gbMovie.poster_120x171}}">
         <br>
-        <p>Title:</p> {{gbMovie.title}}
+        <p>What's It About: {{gbMovie.overview}}</p>
         <br>
-        <p>Release Year:</p> {{gbMovie.release_year}}
+
+        <p>When It Came Out: {{gbMovie.release_year}}</p>
         <br>
-        <p>Rating:</p> {{gbMovie.rating}}
+        <p>Rated: {{gbMovie.rating}}</p>
         <br>
-        <p>Catch this flick on any of these plaforms:</p>
+        <p>Availabe now on any of these plaforms:</p>
         <div id="stream">
-            {{#each guideboxMovie}}
-            <div class="view">
-              <p>{{guideboxMovie.purchase_web_sourceslink.display_name}}:</p> <a href={{guideboxMovie.purchase_web_sourceslink.link}}>Check it out!</a>
+
+            {{#each gbMovie.purchase_ios_sources}}
+            <div class="ios">
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
             </div>
             {{/each}}
+
+            {{#each gbMovie.subscription_web_sources}}
+            <div class="ios">
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+            </div>
+            {{/each}}
+
+
+            {{#each gbMovie.free_web_sources}}
+            <div class="ios">
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+            </div>
+            {{/each}}
+
+            {{#each gbMovie.free_ios_sources}}
+            <div class="ios">
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+            </div>
+            {{/each}}
+
         </div>
+ </div>
 
     </div>
