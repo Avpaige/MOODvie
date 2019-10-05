@@ -2,17 +2,19 @@
 p{
     color:white;
     text-align: center;
+    margin-top: 15px;
 
 }
 
 .header{
     font-weight: bold;
+    font-size: 20px;
     
 }
 
 #concept{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 0 auto;
+    font-size: 20px;
 
 }
 
@@ -23,6 +25,10 @@ p{
 
 h3{
     text-align: center;
-
+    padding-bottom: 10px;
     color:white;
+}
+
+a {
+    font-size: 35px;
 }
