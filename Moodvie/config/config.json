@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "julio",
+    "password": "MySQLPassword!",
     "database": "moodviedb",
     "host": "localhost",
     "dialect": "mysql"
