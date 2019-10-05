@@ -1,62 +1,55 @@
 <nav class="navbar">
-    <a  href="/">
+    <a href="/">
         <img class="moodvieLogo" src="../img/MOODVIEiconsandposter/MOODVIELOGO/MOODVie.jpg">
     </a>
-    <a class=" touch text-light" href="/contact"/>Keep in Touch</a>
+    <a class=" touch text-light" href="/contact" />Keep in Touch</a>
 </nav>
 
-<div class="container-fluid">
-    <br>
-    <p class="text-center text-light resultTitle">Here's where you can watch {{gbMovie.title}}, today!</p>
+<br>
+<h2 class="text-center text-light resultTitle">Here's where you can watch {{gbMovie.title}}, today!</h2>
+<br>
+<br>
 
-    <div id="movies">
-         <div id="moviesDiv">
-        <img src="{{gbMovie.poster_120x171}}">
-        <br>
-        <p>What's It About: {{gbMovie.overview}}</p>
-        <br>
-
-        <p>When It Came Out: {{gbMovie.release_year}}</p>
-        <br>
-        <p>Rated: {{gbMovie.rating}}</p>
-        <br>
-        <p>Availabe now on any of these plaforms:</p>
-        <div id="stream">
-
-            {{#each gbMovie.purchase_ios_sources}}
-            <div class="ios">
-                <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
-                </a>
-            </div>
-            {{/each}}
-
-            {{#each gbMovie.subscription_web_sources}}
-            <div class="ios">
-                <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
-                </a>
-            </div>
-            {{/each}}
-
-
-            {{#each gbMovie.free_web_sources}}
-            <div class="ios">
-                <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
-                </a>
-            </div>
-            {{/each}}
-
-            {{#each gbMovie.free_ios_sources}}
-            <div class="ios">
-                <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
-                </a>
-            </div>
-            {{/each}}
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="{{gbMovie.poster_240x342}}">
         </div>
- </div>
+        <div class="col">
+            <h3 class="header">When It Came Out: {{gbMovie.release_year}}</h3>
+            <h3 class="header">Rated: {{gbMovie.rating}}</h3>
+            <h3>Availabe now on any of these plaforms:</h3>
+            <div id="stream">
 
+                {{#each gbMovie.purchase_ios_sources}}
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+                {{/each}}
+
+                {{#each gbMovie.subscription_web_sources}}
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+                {{/each}}
+
+
+                {{#each gbMovie.free_web_sources}}
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+                {{/each}}
+
+                {{#each gbMovie.free_ios_sources}}
+                <a href={{link}}>
+                    <p> Watch On {{display_name}} <p>
+                </a>
+                {{/each}}
+
+            </div>
+            <div id="concept">
+                <p class="header">What's It About: {{gbMovie.overview}}</p>
+            </div>
+        </div>
     </div>
+</div>
