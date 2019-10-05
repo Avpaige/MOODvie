@@ -18,7 +18,7 @@ module.exports = function (app) {
     res.render("quiz");
   });
 
-  //load quiz results
+  // Load quiz results
   // LAUGH
   app.get("/quizResults/:laugh_wholesome/:laugh_inappropiate/:laugh_bad_movie/:laugh_in_general",
     function (req, res) {
@@ -31,7 +31,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
   // CRY
@@ -46,7 +48,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
   // THINK
@@ -61,7 +65,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
     // EMOTION
@@ -76,7 +82,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
     // AMP
@@ -91,7 +99,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
     // SLEEP
@@ -106,7 +116,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
     // SCARE
@@ -121,7 +133,9 @@ module.exports = function (app) {
         }
       }).then(function (dbMovies) {
         res.render("quizResults", dbMovies);
-      });
+      }).catch(function(error) {
+        console.log(error);
+     });
     });
 
   //contact
