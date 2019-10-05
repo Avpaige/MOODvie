@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="{{gbMovie.poster_240x342}}">
+            <img id="img" src="{{gbMovie.poster_240x342}}">
         </div>
         <div class="col">
             <h3 class="header">When It Came Out: {{gbMovie.release_year}}</h3>
@@ -23,26 +23,26 @@
 
                 {{#each gbMovie.purchase_ios_sources}}
                 <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
+                    <p class="watch"> Watch On {{display_name}} <p>
                 </a>
                 {{/each}}
 
                 {{#each gbMovie.subscription_web_sources}}
                 <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
+                    <p class="watch"> Watch On {{display_name}} <p>
                 </a>
                 {{/each}}
 
 
                 {{#each gbMovie.free_web_sources}}
                 <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
+                    <p class="watch"> Watch On {{display_name}} <p>
                 </a>
                 {{/each}}
 
                 {{#each gbMovie.free_ios_sources}}
                 <a href={{link}}>
-                    <p> Watch On {{display_name}} <p>
+                    <p class="watch"> Watch On {{display_name}} <p>
                 </a>
                 {{/each}}
 
