@@ -229,6 +229,17 @@ module.exports = function (app) {
       });
   });
 
+  app.post("/api/contact", function(req, res) {
+    console.log(req.body);
+    db.mail_list.create({
+      first_name: req.body.first,
+      last_name: req.body.last,
+      email: req.body.email
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
