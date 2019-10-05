@@ -26,6 +26,7 @@ module.exports = function (app) {
       }
     }).then(function (dbMovies) {
       res.json(dbMovies);
+      console.log(res);
     });
   });
 
