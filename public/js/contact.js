@@ -2,9 +2,9 @@
 $("#submit").on("click", function (event) {
     event.preventDefault();
     var newMood = {
-        first: $("#boxTwo").val().trim(),
-        last: $("#boxOne").val().trim(),
-        email: $("#boxThree").val().trim(),
+        first: $("#firstName").val().trim(),
+        last: $("#lastName").val().trim(),
+        email: $("#email").val().trim(),
     };
 
     console.log(newMood)
@@ -13,16 +13,15 @@ $("#submit").on("click", function (event) {
             $("#form").hide()
 
             var newDiv = $("<div>");
-            row.addClass("thanks");
-
-            newDiv.append("<p>" + "Thanks " + newMood.first + "we'll keep you updated with latest MOODvie news!" + "</p>");
+            newDiv.addClass("thanks");
+            newDiv.append("<p>" + "Thanks " + newMood.first + " we'll email you with the latest news!" + "</p>");
            
             $("#contactContainer").prepend(newDiv);
             console.log("success!")
             
         });
 
-    $("#boxTwo").val("");
-    $("#boxOne").val("");
-    $("#boxThree").val("");
+    $("#firstName").val("");
+    $("#lastName").val("");
+    $("#email").val("");
 });
